@@ -1,0 +1,91 @@
+STUDENT GRADE CALCULATOR - TEST CASES
+
+Project: Developers Arena - Week 2
+Python Version: 3.13
+
+1. GRADE CALCULATION TESTS
+
+Test 1:
+Input marks: 100
+Expected grade: A
+Actual grade: A
+Status: PASS
+
+Test 2:
+Input marks: 90
+Expected grade: A
+Actual grade: A
+Status: PASS
+
+Test 3:
+Input marks: 88
+Expected grade: B
+Actual grade: B
+Status: PASS
+
+Test 4:
+Input marks: 85
+Expected grade: B
+Actual grade: B
+Status: PASS
+
+Test 5:
+Input marks: 75
+Expected grade: C
+Actual grade: C
+Status: PASS
+
+Test 6:
+Input marks: 60
+Expected grade: D
+Actual grade: D
+Status: PASS
+
+Test 7:
+Input marks: 33
+Expected grade: F
+Actual grade: F
+Status: PASS
+
+Test 8:
+Input marks: 0
+Expected grade: F
+Actual grade: F
+Status: PASS
+
+
+2. INPUT VALIDATION TESTS
+
+Test 9:
+Input marks: 233
+Expected: Reject marks above 100
+Actual: Invalid marks message displayed
+Status: PASS
+
+Test 10:
+Input marks: -29
+Expected: Reject negative marks
+Actual: Invalid marks message displayed
+Status: PASS
+
+Test 11:
+Input marks: hyy
+Expected: Reject non-numeric input
+Actual: Invalid input message displayed
+Status: PASS
+
+Test 12:
+Input marks: 101
+Expected: Reject marks above 100
+Actual: Invalid marks message displayed
+Status: PASS
+
+
+SUMMARY
+
+Total tests completed: 12
+Tests passed: 12
+Tests failed: 0
+
+Note: Grade-boundary values 59, 69, 79 and 89
+have not yet been tested individually.
