@@ -6,19 +6,11 @@
 
 
 
-This project focuses on analyzing retail sales data using Python and the Pandas library.
+This project performs exploratory data analysis on a sales dataset provided for the Developers Arena Python Internship — Week 3.
 
 
 
-The objective is to explore sales transactions, clean the dataset, calculate important business metrics, and generate meaningful insights to support business decision-making.
-
-
-
-\*\*Internship:\*\* Developers Arena Python Internship
-
-\*\*Project:\*\* Sales Data Analysis
-
-\*\*Technology:\*\* Python, Pandas, CSV
+The objective is to understand sales performance, identify the best-selling products, compare regional revenue, calculate key business metrics, and generate meaningful insights using Python and Pandas.
 
 
 
@@ -26,231 +18,241 @@ The objective is to explore sales transactions, clean the dataset, calculate imp
 
 
 
-The dataset contains retail sales transactions with the following attributes:
+The dataset contains 100 sales transactions and 7 columns.
 
 
 
-\* Order\_ID
+| Column      | Description                    |
 
-\* Order\_Date
+| ----------- | ------------------------------ |
 
-\* Product
+| Date        | Date of transaction            |
 
-\* Category
+| Product     | Product purchased              |
 
-\* Quantity
+| Quantity    | Number of units sold           |
 
-\* Unit\_Price
+| Price       | Price per unit                 |
 
-\* Total\_Sales
+| Customer\_ID | Unique customer identifier     |
 
-\* Region
+| Region      | Sales region                   |
 
+| Total\_Sales | Total value of the transaction |
 
 
-The original dataset contained 13 records and 8 columns.
 
+\*\*Dataset period:\*\* 1 January 2024 – 9 April 2024
 
+\*\*Total records:\*\* 100
 
-After data cleaning, 12 valid records were retained.
+\*\*Total columns:\*\* 7
 
 
 
-\## 3. Data Cleaning
+\## 3. Data Cleaning and Preprocessing
 
 
 
-The following data-cleaning operations were performed:
+The following preprocessing operations were performed:
 
 
 
-\* Identified missing values in Quantity and Region.
+\* Checked the dataset for missing values.
 
-\* Filled missing Quantity using the median.
+\* Checked for duplicate records.
 
-\* Filled missing Region using the mode.
+\* Converted the Date column into datetime format.
 
-\* Identified and removed duplicate transactions using Order\_ID.
+\* Verified numeric columns.
 
-\* Converted Order\_Date into datetime format.
+\* Checked for invalid or negative quantity and price values.
 
-\* Validated numerical values.
+\* Recalculated Total\_Sales using Quantity × Price.
 
-\* Recalculated Total\_Sales using Quantity multiplied by Unit\_Price.
+\* Exported the cleaned dataset to `cleaned\_sales\_data.csv`.
 
 
 
-\### Cleaning Results
+\### Data Quality Results
 
 
 
-| Metric            | Before Cleaning | After Cleaning |
+| Check             | Result |
 
-| ----------------- | --------------: | -------------: |
+| ----------------- | -----: |
 
-| Records           |              13 |             12 |
+| Total records     |    100 |
 
-| Missing Quantity  |               1 |              0 |
+| Missing values    |      0 |
 
-| Missing Region    |               1 |              0 |
+| Duplicate records |      0 |
 
-| Duplicate Records |               1 |              0 |
+| Unique customers  |    100 |
 
-| Columns           |               8 |              8 |
 
 
+The original dataset contained no missing values or duplicate records. Therefore, no missing-value imputation or duplicate removal was necessary.
 
-\## 4. Sales Analysis Results
 
 
+\## 4. Key Performance Metrics
 
-\### Overall Sales Performance
 
 
+| Metric                           |      Result |
 
-| Metric                    |    Result |
+| -------------------------------- | ----------: |
 
-| ------------------------- | --------: |
+| Total Revenue                    | ₹12,365,048 |
 
-| Total Revenue             | ₹3,18,300 |
+| Total Units Sold                 |         478 |
 
-| Total Units Sold          |        38 |
+| Average Transaction Value        | ₹123,650.48 |
 
-| Average Transaction Value |   ₹26,525 |
+| Average Quantity per Transaction |        4.78 |
 
-| Highest Transaction       | ₹1,10,000 |
+| Number of Customers              |         100 |
 
-| Lowest Transaction        |    ₹2,500 |
+| Best-Selling Product             |      Laptop |
 
+| Highest Revenue Region           |       North |
 
+| Highest Sales Month              |  March 2024 |
 
-\### Product Performance
 
 
+\## 5. Product Performance Analysis
 
-| Product    | Units Sold |   Revenue |
 
-| ---------- | ---------: | --------: |
 
-| Laptop     |          4 | ₹2,20,000 |
+\### Revenue by Product
 
-| Mouse      |         15 |    ₹7,500 |
 
-| Keyboard   |          9 |   ₹10,800 |
 
-| Monitor    |          6 |   ₹72,000 |
+| Product    |    Revenue |
 
-| Headphones |          4 |    ₹8,000 |
+| ---------- | ---------: |
 
+| Headphones | ₹1,384,033 |
 
+| Laptop     | ₹3,889,210 |
 
-\*\*Best-selling product by quantity:\*\* Mouse
+| Monitor    | ₹1,348,071 |
 
+| Phone      | ₹2,859,394 |
 
+| Tablet     | ₹2,884,340 |
 
-\*\*Highest revenue-generating product:\*\* Laptop
 
 
+\### Quantity Sold by Product
 
-\### Regional Performance
 
 
+| Product    | Units Sold |
 
-| Region |   Revenue |
+| ---------- | ---------: |
 
-| ------ | --------: |
+| Laptop     |        136 |
 
-| South  | ₹1,72,200 |
+| Tablet     |        127 |
 
-| West   |   ₹72,000 |
+| Phone      |        101 |
 
-| North  |   ₹65,500 |
+| Monitor    |         66 |
 
-| East   |    ₹8,600 |
+| Headphones |         48 |
 
 
 
-The South region generated the highest revenue.
+\*\*Observation:\*\* Laptop was the best-performing product in both total quantity sold and revenue generated.
 
 
 
-\### Category Performance
+\## 6. Regional Sales Analysis
 
 
 
-| Category    |   Revenue |
+| Region |    Revenue |
 
-| ----------- | --------: |
+| ------ | ---------: |
 
-| Electronics | ₹2,92,000 |
+| East   | ₹2,519,639 |
 
-| Accessories |   ₹26,300 |
+| North  | ₹3,983,635 |
 
+| South  | ₹3,737,852 |
 
+| West   | ₹2,123,922 |
 
-Electronics contributed approximately 91.7% of total revenue.
 
 
+\*\*Observation:\*\* The North region generated the highest revenue, followed by the South region. The West region recorded the lowest revenue.
 
-\## 5. Key Business Insights
 
 
+\## 7. Monthly Sales Analysis
 
-1\. Laptop generated the highest revenue, contributing approximately 69.1% of total sales.
 
-2\. Mouse recorded the highest sales volume with 15 units sold.
 
-3\. The South region was the strongest-performing region.
+| Month         |    Revenue |
 
-4\. Electronics generated the majority of the business revenue.
+| ------------- | ---------: |
 
-5\. The average transaction value was ₹26,525.
+| January 2024  | ₹4,120,524 |
 
+| February 2024 | ₹2,656,050 |
 
+| March 2024    | ₹4,485,006 |
 
-\## 6. Technologies Used
+| April 2024    | ₹1,103,468 |
 
 
 
-\* Python: Programming and analysis.
+\*\*Observation:\*\* March 2024 recorded the highest revenue.
 
-\* Pandas: Data loading, cleaning, manipulation and aggregation.
 
-\* CSV: Dataset storage.
 
-\* Git and GitHub: Version control and project submission.
+Note: April contains data only from 1 April to 9 April, so it represents a partial month and should not be directly compared with the complete months.
 
 
 
-\## 7. Conclusion
+\## 8. Transaction Analysis
 
 
 
-The Sales Data Analysis project successfully demonstrates the use of Python and Pandas for working with real-world datasets.
+\* Highest transaction value: ₹373,932.
 
+\* Highest transaction date: 16 January 2024.
 
+\* Product in highest transaction: Phone.
 
-The project covers data loading, exploration, missing-value handling, duplicate removal, statistical analysis, revenue calculations, and business insight generation.
+\* Lowest transaction value: ₹6,540.
 
+\* Lowest transaction date: 23 February 2024.
 
+\* Product in lowest transaction: Tablet.
 
-The analysis identifies important sales trends across products, categories, and regions.
 
 
+\## 9. Conclusion
 
-This project demonstrates fundamental data-analysis skills and the ability to convert raw sales data into meaningful business information.
 
 
+The analysis identified several useful business insights:
 
-\## 8. Project Status
 
 
+1\. Total sales revenue reached ₹12,365,048 across 100 transactions.
 
-\*\*Status: Successfully Completed\*\*
+2\. Laptop was the strongest product based on both quantity sold and revenue.
 
+3\. North was the highest-revenue region.
 
+4\. March 2024 recorded the highest monthly revenue.
 
-All major technical requirements of the Week 3 assignment have been implemented.
+5\. The dataset contained 100 unique customers and no
 
 
 

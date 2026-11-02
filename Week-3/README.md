@@ -1,42 +1,84 @@
-\# Week 3: Sales Data Analysis
+\# Week 3: Introduction to Data Analysis
 
 
 
-\## Project Overview
+\## Project: Sales Data Analysis
 
 
 
-A Python-based sales data analysis project developed as part of the Developers Arena Python Internship.
+This project was completed as part of the Developers Arena Python Internship — Week 3.
 
 
 
-The project uses Pandas to load, explore, clean, and analyze retail sales data to generate meaningful business insights.
+The project focuses on analysing a real sales dataset using Python and Pandas to identify sales trends, product performance, regional revenue, and important business metrics.
 
 
 
-\## Features
+\## Objectives
 
 
 
-\* CSV data loading using Pandas
+\* Understand and explore a real-world CSV dataset.
 
-\* Dataset exploration and statistical summaries
+\* Load and analyse data using Pandas.
 
-\* Missing value identification and handling
+\* Identify missing values and duplicate records.
 
-\* Duplicate record removal
+\* Perform data cleaning and preprocessing.
 
-\* Date datatype conversion
+\* Calculate key sales metrics.
 
-\* Total revenue calculation
+\* Generate meaningful business insights.
 
-\* Product-wise sales analysis
 
-\* Region-wise revenue analysis
 
-\* Category-wise sales analysis
+\## Project Structure
 
-\* Automated analysis report
+
+
+```text
+
+Week-3/
+
+│
+
+├── sales\_analysis.py
+
+├── sales\_data.csv
+
+├── cleaned\_sales\_data.csv
+
+├── analysis\_report.md
+
+├── requirements.txt
+
+└── README.md
+
+```
+
+
+
+\## Dataset Information
+
+
+
+The dataset contains 100 sales transactions and the following columns:
+
+
+
+\* Date
+
+\* Product
+
+\* Quantity
+
+\* Price
+
+\* Customer\_ID
+
+\* Region
+
+\* Total\_Sales
 
 
 
@@ -51,32 +93,6 @@ The project uses Pandas to load, explore, clean, and analyze retail sales data t
 \* CSV
 
 \* Git and GitHub
-
-
-
-\## Project Structure
-
-
-
-```text
-
-Week-3/
-
-├── sales\_analysis.py
-
-├── sales\_data.csv
-
-├── sales\_data\_original.csv
-
-├── cleaned\_sales\_data.csv
-
-├── analysis\_report.md
-
-├── requirements.txt
-
-└── README.md
-
-```
 
 
 
@@ -96,11 +112,23 @@ pip install -r requirements.txt
 
 
 
-\## Execution
+\## How to Run
 
 
 
-Run the Python program:
+Navigate to the Week-3 directory:
+
+
+
+```bash
+
+cd Week-3
+
+```
+
+
+
+Run the analysis:
 
 
 
@@ -112,25 +140,61 @@ python sales\_analysis.py
 
 
 
+\## Analysis Performed
+
+
+
+1\. Loaded the sales dataset using Pandas.
+
+2\. Explored dataset dimensions, columns, data types, and statistical summaries.
+
+3\. Checked missing values and duplicate records.
+
+4\. Converted date values into datetime format.
+
+5\. Validated numeric data and recalculated total sales.
+
+6\. Calculated total revenue and units sold.
+
+7\. Identified the best-selling product.
+
+8\. Analysed product-wise and region-wise revenue.
+
+9\. Performed monthly sales analysis.
+
+10\. Generated a cleaned CSV file and a detailed analysis report.
+
+
+
 \## Key Results
 
 
 
-| Metric                   |      Result |
+| Metric                    |      Result |
 
-| ------------------------ | ----------: |
+| ------------------------- | ----------: |
 
-| Total Revenue            |   ₹3,18,300 |
+| Total Revenue             | ₹12,365,048 |
 
-| Total Units Sold         |          38 |
+| Total Units Sold          |         478 |
 
-| Best-selling Product     |       Mouse |
+| Average Transaction Value | ₹123,650.48 |
 
-| Highest Revenue Product  |      Laptop |
+| Best-Selling Product      |      Laptop |
 
-| Best Performing Region   |       South |
+| Highest Revenue Region    |       North |
 
-| Best Performing Category | Electronics |
+| Best Sales Month          |  March 2024 |
+
+
+
+\## Output Files
+
+
+
+\* `cleaned\_sales\_data.csv` — Contains the cleaned dataset.
+
+\* `analysis\_report.md` — Contains the detailed analysis and business insights.
 
 
 
@@ -138,89 +202,7 @@ python sales\_analysis.py
 
 
 
-This project demonstrates fundamental data analysis skills using Python and Pandas, including data cleaning, aggregation, statistical exploration, and business insight generation.
-
-
-
-\*\*Internship:\*\* Developers Arena
-
-\*\*Week:\*\* 3
-
-\*\*Project Status:\*\* Completed
-
-
-
-````
-
-
-
-\## 3. Final GitHub submission
-
-
-
-After saving README.md, navigate to your main repository:
-
-
-
-```cmd
-
-cd ..
-
-````
-
-
-
-Execute:
-
-
-
-```cmd
-
-git status
-
-git add Week-3/
-
-git commit -m "Complete Week 3 Sales Data Analysis"
-
-git push origin main
-
-```
-
-
-
-\## 4. Final submission checklist
-
-
-
-| Requirement               | Status  |
-
-| ------------------------- | ------- |
-
-| Pandas implementation     | ✅       |
-
-| CSV loading               | ✅       |
-
-| Missing value handling    | ✅       |
-
-| Duplicate removal         | ✅       |
-
-| Three or more metrics     | ✅       |
-
-| Formatted analysis report | ✅       |
-
-| Comments in Python code   | ✅       |
-
-| README documentation      | Add now |
-
-| GitHub submission         | Pending |
-
-
-
-\*\*My assessment:\*\* Your implementation covers the core Week 3 requirements. Adding the README and pushing the files will complete the submission package.
-
-
-
-Share your GitHub link after pushing, and I'll conduct a final review.
+This project provided practical experience in analysing real-world data using Pandas. It demonstrated data exploration, validation, cleaning, aggregation, statistical analysis, and the interpretation of business insights.
 
 
 
