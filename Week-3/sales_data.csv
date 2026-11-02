@@ -1,0 +1,14 @@
+Order_ID,Order_Date,Product,Category,Quantity,Unit_Price,Total_Sales,Region
+101,2026-10-01,Laptop,Electronics,2,55000,110000,South
+102,2026-10-02,Mouse,Accessories,5,500,2500,North
+103,2026-10-03,Keyboard,Accessories,3,1200,3600,East
+104,2026-10-04,Monitor,Electronics,2,12000,24000,West
+105,2026-10-05,Laptop,Electronics,1,55000,55000,South
+106,2026-10-06,Headphones,Accessories,,2000,8000,North
+107,2026-10-07,Mouse,Accessories,10,500,5000,East
+108,2026-10-08,Monitor,Electronics,1,12000,12000,West
+109,2026-10-09,Keyboard,Accessories,6,1200,7200,South
+110,2026-10-10,Laptop,Electronics,1,55000,55000,North
+111,2026-10-11,Headphones,Accessories,2,2000,4000
+112,2026-10-12,Monitor,Electronics,3,12000,36000,West
+112,2026-10-12,Monitor,Electronics,3,12000,36000,West
